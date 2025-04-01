@@ -15,22 +15,25 @@
           el.style.display = "none";
         });
         if (tipoUsuario) {
-          document.getElementById(`campos${tipoUsuario}`).style.display = "block";
+          document.getElementById(`campos${tipoUsuario}`).style.display =
+            "block";
         }
-      }
-      
-      function voltarParaInicio() {
-        window.location.href = 'index.html';
       }
     </script>
   </head>
-  <body class="d-flex justify-content-center align-items-center min-vh-100 bg-light">
+  <body
+    class="d-flex justify-content-center align-items-center min-vh-100 bg-light"
+  >
     <div class="container p-4 bg-white shadow rounded">
       <h2 class="text-center mb-4">Cadastro de Usuário</h2>
       <form>
         <div class="mb-3">
           <label for="tipoUsuario" class="form-label">Tipo de Usuário</label>
-          <select class="form-select" id="tipoUsuario" onchange="atualizarCampos()">
+          <select
+            class="form-select"
+            id="tipoUsuario"
+            onchange="atualizarCampos()"
+          >
             <option selected disabled>Selecione um tipo</option>
             <option value="Administrador">Administrador</option>
             <option value="Cliente">Cliente</option>
@@ -38,40 +41,70 @@
           </select>
         </div>
 
+        <!-- Campos para Administrador e Cliente -->
         <div id="camposAdministrador" class="user-fields" style="display: none">
           <div class="mb-3">
             <label class="form-label">Nome Fantasia</label>
-            <input type="text" class="form-control" placeholder="Nome da empresa" />
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Nome da empresa"
+            />
           </div>
           <div class="mb-3">
             <label class="form-label">Endereço</label>
-            <input type="text" class="form-control" placeholder="Rua, número, cidade" />
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Rua, número, cidade"
+            />
           </div>
           <div class="mb-3">
             <label class="form-label">CNPJ</label>
-            <input type="text" class="form-control" placeholder="00.000.000/0000-00" />
+            <input
+              type="text"
+              class="form-control"
+              placeholder="00.000.000/0000-00"
+            />
           </div>
         </div>
 
         <div id="camposCliente" class="user-fields" style="display: none">
           <div class="mb-3">
             <label class="form-label">Nome Fantasia</label>
-            <input type="text" class="form-control" placeholder="Nome da empresa" />
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Nome da empresa"
+            />
           </div>
           <div class="mb-3">
             <label class="form-label">Endereço</label>
-            <input type="text" class="form-control" placeholder="Rua, número, cidade" />
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Rua, número, cidade"
+            />
           </div>
           <div class="mb-3">
             <label class="form-label">CNPJ</label>
-            <input type="text" class="form-control" placeholder="00.000.000/0000-00" />
+            <input
+              type="text"
+              class="form-control"
+              placeholder="00.000.000/0000-00"
+            />
           </div>
         </div>
 
+        <!-- Campos para Motoboy -->
         <div id="camposMotoboy" class="user-fields" style="display: none">
           <div class="mb-3">
             <label class="form-label">Nome</label>
-            <input type="text" class="form-control" placeholder="Nome completo" />
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Nome completo"
+            />
           </div>
           <div class="mb-3">
             <label class="form-label">Data de Nascimento</label>
@@ -87,7 +120,11 @@
           </div>
           <div class="mb-3">
             <label class="form-label">CPF</label>
-            <input type="text" class="form-control" placeholder="000.000.000-00" />
+            <input
+              type="text"
+              class="form-control"
+              placeholder="000.000.000-00"
+            />
           </div>
           <div class="mb-3">
             <label class="form-label">Placa do Veículo</label>
@@ -95,23 +132,29 @@
           </div>
         </div>
 
+        <!-- Campos Comuns -->
         <div class="mb-3">
           <label class="form-label">E-mail</label>
-          <input type="email" class="form-control" placeholder="seuemail@email.com" />
+          <input
+            type="email"
+            class="form-control"
+            placeholder="seuemail@email.com"
+          />
         </div>
         <div class="mb-3">
           <label class="form-label">Telefone</label>
-          <input type="text" class="form-control" placeholder="(00) 00000-0000" />
+          <input
+            type="text"
+            class="form-control"
+            placeholder="(00) 00000-0000"
+          />
         </div>
         <div class="mb-3">
           <label class="form-label">Senha</label>
           <input type="password" class="form-control" placeholder="********" />
         </div>
 
-        <div class="d-flex justify-content-between">
-          <button type="submit" class="btn btn-primary">Cadastrar</button>
-          <button type="button" class="btn btn-danger" onclick="voltarParaInicio()">Cancelar</button>
-        </div>
+        <button type="submit" class="btn btn-primary w-100">Login</button>
       </form>
     </div>
   </body>
